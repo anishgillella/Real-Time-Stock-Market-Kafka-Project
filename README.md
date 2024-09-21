@@ -18,7 +18,8 @@ bash
 Copy code
 git clone https://github.com/your-username/real-time-stock-analysis.git
 cd real-time-stock-analysis
-2. Install Required Python Packages
+
+3. Install Required Python Packages
 Navigate to the /scripts/ directory and install the required Python packages using pip:
 
 bash
@@ -28,6 +29,7 @@ pip install -r requirements.txt
 EC2 Instance Setup: Launch an EC2 instance on AWS and SSH into the instance.
 Kafka and Zookeeper Installation: Follow the instructions in the /kafka/ directory to install and configure Kafka and Zookeeper.
 Start Zookeeper and Kafka: Use the provided scripts to start Zookeeper and Kafka on the EC2 instance.
+
 4. Simulate Real-Time Stock Data
 Run the data_producer.py script in the /scripts/ directory to simulate and produce real-time stock data into Kafka:
 
@@ -43,6 +45,7 @@ python data_consumer.py
 6. Catalog Data with AWS Glue
 Set up a Glue Crawler as per the instructions in the /aws/ directory to catalog the data stored in S3.
 Ensure the crawler runs and populates the Glue Data Catalog.
+
 7. Query Data Using Amazon Athena
 Use the SQL queries provided in the /aws/athena_queries/ directory to query the data cataloged by AWS Glue through Amazon Athena.
 
@@ -56,6 +59,8 @@ Microservices with Kubernetes: Offers better scalability but increases system co
 Serverless Architecture with AWS Lambda: Easier to scale but may introduce latency.
 Google Cloud Pub/Sub and BigQuery: Easier management but limited to Google Cloud.
 Apache Hadoop: Efficient for batch processing but not ideal for real-time data.
+
+
 Conclusion
 This project showcases the use of Apache Kafka and AWS services for real-time data streaming and analysis. By following the setup instructions, users can replicate the system and explore real-time data processing for various applications.
 
